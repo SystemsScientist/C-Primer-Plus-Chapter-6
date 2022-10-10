@@ -7,20 +7,21 @@
 
 # include <stdio.h>
 
-#define ALPHABET_LENGTH 26
 #define LETTERS 26
 
 int main() {
-
-	char alphabet_array[ALPHABET_LENGTH];
+	
+	char alphabet[26];
 	char ch;
 	int index;
-
-	for (ch = 'a'; ch <= 'z'; ch++)
-		alphabet_array[ch] += ch;
-
-	for (index = 1; index <= LETTERS; index++)
-		printf("Letter = %c\n", alphabet_array[ch]);
-
+	
+	// insert letters a through x into alphabet array
+	for (ch = 'a';ch - 'a' <= LETTERS; ch++)
+		alphabet[ch - 'a'] = ch;
+	
+	// read letters a through x from alphabet array
+	for (index = 0; index < 26; index++)
+		printf("Letter = %c\n", alphabet[index]);
+	
 	return 0;
 }
