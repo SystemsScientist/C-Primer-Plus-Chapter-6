@@ -19,8 +19,8 @@ int main() {
 	int column;
 	char ch;
 
-	for (row = 0; row < ROWS; row++) {
-		for (ch = 'F'; ch < ('A' + 1); ch--)
+	for (row = 1; row < ROWS; row++) {
+		for (ch = 'F'; 'F' - ch < row; ch--)
 			printf("%c", ch);
 		printf("\n");
 	}
